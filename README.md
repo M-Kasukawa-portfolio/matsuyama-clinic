@@ -5,7 +5,7 @@ Figmaのデザインカンプに基づきコーディングしました。
 
 ## Demo
 
-https://mkdesignworks.net/portfolio/matsuyama-clinic/index.html
+https://mkdesignworks.net/portfolio/matsuyama-clinic/
 
 ## 概要
 
