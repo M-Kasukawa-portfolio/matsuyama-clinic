@@ -1,0 +1,20 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-img-separate
+--------
+*/
+
+.top-img-separate {
+    background-image: url(../img/kv-sp.jpg);
+    aspect-ratio: 380/320;
+    width: 380rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include g.mq() {
+        background-image: url(../img/kv.jpg);
+        aspect-ratio: 1440/472;
+        width: 1440rem;
+    }
+}

@@ -1,0 +1,109 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-entry
+--------
+*/
+.top-entry {
+    background-color: #e0ebee;
+    @include g.mq() {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+    }
+}
+
+.top-entry-img {
+    background-image: url(../img/pic-entry-sp.jpg);
+    aspect-ratio: 380/240;
+    width: 380rem;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    @include g.mq() {
+        background-image: url(../img/pic-entry.jpg);
+        aspect-ratio: 740/472;
+        width: 740rem;
+    }
+}
+
+.top-entry-content {
+    padding: 48rem 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    @include g.mq() {
+        padding: 78rem 72rem;
+        gap: 30rem;
+    }
+}
+
+.top-entry-title-japanese {
+    position: relative;
+    padding-left: 42rem;
+    @include g.mq() {
+        padding-left: 78rem;
+    }
+}
+
+.top-entry-title-japanese::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: var(--color-font-light);
+    width: 34rem;
+    height: 1px;
+    @include g.mq() {
+        width: 70rem;
+    }
+}
+
+.top-entry-text span {
+    display: block;
+}
+
+.top-entry-button {
+    display: inline-block;
+    width: 322.5rem;
+    padding: 18rem 32rem 14rem;
+    border-radius: 100vh;
+    background: linear-gradient(to bottom right, rgba(117, 194, 235, 1) 0%, rgba(67, 207, 207, 1) 50%, rgba(75, 210, 215, 1) 100%);
+}
+
+.top-entry-button:hover {
+    @include g.mq() {
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+}
+
+.top-entry-button-inner {
+    display: flex;
+    align-items: center;
+    gap: 80rem;
+}
+
+.top-entry-button-text-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 8rem;
+    color: var(--color-font-white);
+    line-height: 1.7;
+}
+
+.top-entry-button-text-english {
+    font-size: 24rem;
+    text-transform: uppercase;
+    font-family: var(--font-family-english);
+}
+
+.top-entry-button-text {
+    font-size: 14rem;
+}
+
+.top-entry-button-icon img {
+    width: 11rem;
+    height: 20rem;
+}

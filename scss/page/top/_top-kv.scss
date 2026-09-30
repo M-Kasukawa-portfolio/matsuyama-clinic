@@ -1,0 +1,36 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-kv
+--------
+*/
+
+.top-kv {
+    position: relative;
+    aspect-ratio: 380/600;
+    background-image: url(../img/top-kv-sp.jpg);
+    background-position: center;
+    background-size: cover;
+    @include g.mq() {
+        background-image: url(../img/top-kv.jpg);
+        aspect-ratio: 1440/800;
+    }
+}
+
+.top-kv-copy {
+    position: absolute;
+    aspect-ratio: 356/180;
+    width: 356rem;
+    background-image: url(../img/catchcopy-sp.svg);
+    background-position: center;
+    background-size: cover;
+    top: 243rem;
+    left: 50%;
+    translate: -50% 0;
+    @include g.mq() {
+        background-image: url(../img/catchcopy.svg);
+        aspect-ratio: 664/268;
+        width: 664rem;
+        top: 234rem;
+    }
+}

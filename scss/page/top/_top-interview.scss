@@ -1,0 +1,200 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-interview
+--------
+*/
+
+.top-interview {
+    position: relative;
+}
+
+.top-interview-inner {
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--color-bg-base);
+    position: relative;
+    margin-top: -40rem;
+    padding: 80rem 0;
+    z-index: 10;
+    @include g.mq() {
+        padding: 120rem 0;
+        margin-top: -80rem;
+    }
+}
+
+.top-interview-inner::after {
+    content: "";
+    background-image: url(../img/bg-interview-copy-sp.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 380/204;
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    bottom: 324rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    @include g.mq() {
+        background-image: url(../img/bg-interview-copy.png);
+        aspect-ratio: 1440/524;
+        bottom: 186rem;
+    }
+}
+
+.top-interview-title {
+    text-align: center;
+}
+
+.top-interview-title-japanese {
+    position: relative;
+}
+
+.top-interview-title-japanese::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 73.5rem;
+    transform: translateY(-50%);
+    background-color: var(--color-font-light);
+    width: 45.5rem;
+    height: 1px;
+    @include g.mq() {
+        width: 76rem;
+        left: 522rem;
+    }
+}
+
+.top-interview-title-japanese::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 73.5rem;
+    transform: translateY(-50%);
+    background-color: var(--color-font-light);
+    width: 45.5rem;
+    height: 1px;
+    @include g.mq() {
+        width: 76rem;
+        right: 522rem;
+    }
+}
+
+.top-interview-list {
+    margin-top: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 44rem;
+    position: relative;
+    @include g.mq() {
+        flex-direction: row;
+        justify-content: center;
+        gap: 44rem;
+    }
+}
+
+.top-interview-item,
+.top-interview-item02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-interview-item02 {
+    @include g.mq() {
+        margin-top: 56rem;
+    }
+}
+
+.top-interview-item-inner,
+.top-interview-item-inner02 {
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 340/254;
+    width: 340rem;
+    padding: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include g.mq() {
+        width: 524rem;
+        padding: 24rem;
+    }
+}
+
+.top-interview-item-inner {
+    background-image: url(../img/pic-interview.png);
+}
+
+.top-interview-item-inner02 {
+    background-image: url(../img/pic-interview02.png);
+}
+
+.top-interview-item-text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    @include g.mq() {
+        gap: 8rem;
+    }
+}
+
+.top-interview-text {
+    display: inline-block;
+    background: var(--color-bg-white);
+    box-decoration-break: clone;
+    padding: 3rem 8rem;
+    font-weight: bold;
+    font-size: 20rem;
+    line-height: 1.7;
+    height: 40rem;
+    @include g.mq() {
+        font-size: 22rem;
+        height: 43rem;
+    }
+}
+
+.top-interview-button {
+    margin-top: 24rem;
+    display: flex;
+}
+
+.top-interview-button:hover {
+    @include g.mq() {
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+}
+
+.top-interview-button-inner,
+.top-interview-button-inner02 {
+    font-family: var(--font-family-base);
+    color: var(--color-font-base);
+    font-weight: bold;
+    font-size: 14rem;
+    line-height: 1.7;
+    border-radius: 100vh;
+    padding: 18rem 32rem;
+    gap: 32rem;
+    display: inline-flex;
+    align-items: center;
+    @include g.mq() {
+        font-size: 16rem;
+    }
+}
+
+.top-interview-button-inner {
+    background-image: linear-gradient(to bottom right, rgba(228, 239, 249, 1) 0%, rgba(227, 243, 243, 1) 50%, rgba(182, 222, 240, 1) 100%);
+}
+
+.top-interview-button-inner02 {
+    background-image: linear-gradient(to bottom right, rgba(228, 249, 248, 1) 0%, rgba(227, 243, 233, 1) 50%, rgba(200, 241, 194, 1) 100%);
+}
+
+.top-interview-button-inner img,
+.top-interview-button-inner02 img {
+    width: 7rem;
+    height: 12rem;
+}

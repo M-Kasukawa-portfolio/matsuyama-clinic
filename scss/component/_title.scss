@@ -1,0 +1,59 @@
+@use "../global" as g;
+
+/*!
+component > title
+------------------------------
+*/
+%title-english {
+    text-transform: uppercase;
+    color: var(--color-font-base);
+    letter-spacing: 0.05em;
+    font-family: var(--font-family-english);
+    display: block;
+}
+
+/*! level1 */
+
+/*! level2 */
+.c-title-level2 {
+    font-size: 14rem;
+    color: var(--color-font-light);
+    line-height: 1.7;
+}
+
+.c-title-level2-english {
+    font-size: 32rem;
+    line-height: 1.5;
+    @extend %title-english;
+
+    @include g.mq() {
+        font-size: 42rem;
+    }
+}
+
+/*! level3 */
+.c-title-level3 {
+    font-size: 18rem;
+    color: var(--color-font-base);
+    line-height: 1.5;
+    font-weight: bold;
+
+    @include g.mq() {
+        font-size: 20rem;
+    }
+}
+
+.c-title-level3-white {
+    font-size: 22rem;
+    color: var(--color-font-white);
+    line-height: 1.7;
+    font-weight: bold;
+}
+
+.c-title-level3-white-english {
+    font-size: 14rem;
+    color: var(--color-font-white);
+    line-height: 1;
+    font-weight: bold;
+    @extend %title-english;
+}
